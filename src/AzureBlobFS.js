@@ -452,7 +452,7 @@ class AzureBlobFS {
           contentSettings: properties.contentSettings,
           isDirectory    : IS_FILE,
           metadata,
-          mode           : R_OK | W_OK,
+          mode           : R_OK | W_OK | S_IFREG,
           mtime          : new Date(properties.lastModified),
           size           : +properties.contentLength,
           url            : this._blobService.getUrl(this.container, pathname)
